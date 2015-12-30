@@ -8,7 +8,7 @@ imported_publishers = Publisher.import publishers
 
 books = []
 imported_publishers.ids.each do |publisher_id|
-  10000.times do |i|
+  100.times do |i|
     books << Book.new(name: Faker::Name.name, description: Faker::Lorem.sentence, publisher_id: publisher_id)
   end
 end
