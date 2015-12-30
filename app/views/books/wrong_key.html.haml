@@ -1,0 +1,5 @@
+- cache('books_list') do
+  - @books.each do |book|
+    - cache(book) do
+      %p
+        = "#{book.name} - #{book.description}"

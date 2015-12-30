@@ -1,0 +1,5 @@
+- cache(["book_list", @books.map(&:id), @books.maximum(:updated_at)]) do
+  - @books.each do |book|
+    - cache(book) do
+      %p
+        = "#{book.name} - #{book.description}"
